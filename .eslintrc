@@ -1,0 +1,117 @@
+{ "parser": "babel-eslint"
+, "ecmaFeatures":
+  { "forOf": true
+  , "jsx": true
+  }
+, "rules":
+  { "dot-location":
+    [ 2
+    , "property"
+    ]
+  , "strict": 0
+  , "no-extra-parens": 0
+  , "no-fallthrough": 0
+  , "no-trailing-spaces": 1
+  , "eqeqeq": 1
+  , "computed-property-spacing":
+    [ 2
+    , "never"
+    ]
+  , "space-infix-ops": 1
+  , "max-len":
+    [ 2
+    , 80
+    , 2
+    ]
+  , "indent":
+    [ 2
+    , 2
+    , { "SwitchCase": 1
+      }
+    ]
+  , "quotes":
+    [ 1
+    , "single"
+    , "avoid-escape"
+    ]
+  , "curly":
+    [ 2
+    , "multi-line"
+    ]
+  , "semi":
+    [ 2
+    , "never"
+    ]
+  , "no-unexpected-multiline": 2
+  , "comma-dangle":
+    [ 2
+    , "never"
+    ]
+  , "comma-style":
+    [ 2
+    , "first"
+    ]
+  , "comma-spacing": 2
+  , "operator-linebreak":
+    [ 2
+    , "after"
+    ]
+  , "object-curly-spacing": 0
+  , "prefer-template": 2
+  , "prefer-arrow-callback": 2
+  , "space-before-keywords": 2
+  , "space-before-blocks": 2
+  , "space-before-function-paren":
+    [ 1
+    , "always"
+    ]
+  , "brace-style":
+    [ 2
+    , "1tbs"
+    ]
+  , "no-multiple-empty-lines":
+    [ 1
+    , { "max": 1
+      }
+    ]
+  , "arrow-spacing":
+    [ 1
+    , { "before": true
+      , "after": true
+      }
+    ]
+  , "no-console": 0
+  , "no-undef-init": 2
+  , "handle-callback-err":
+    [ 2
+    , "er"
+    ]
+  }
+, "env":
+  { "node": false
+  , "browser": true
+  , "es6": true
+  }
+, "extends": "eslint:recommended"
+, "globals":
+  { "require": false
+  , "__PATH__": false
+  , "__HOME__": false
+  , "__USER__": false
+  , "__DEV__": false
+  , "window": false
+  , "module": false
+  , "process": false
+  , "__dirname": false
+  , "Buffer": false
+  , "describe": false
+  , "it": false
+  , "afterEach": false
+  , "before": false
+  , "beforeEach": false
+  , "AWS": false
+  }
+, "plugins":
+  [ "eslint-plugin-babel"
+  ]
+}

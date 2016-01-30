@@ -1,0 +1,41 @@
+{
+  "name": "plover_parser",
+  "version": "0.0.1",
+  "description": "Checks Plover logs against a wordlist.",
+  "main": "bin/count_plover_log.js",
+  "bin": {
+    "count_plover_log": "bin/count_plover_log.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node src/index.js assets/10000words.txt",
+    "build": "babel src/index.js > bin/count_plover_log.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morinted/plover_parser.git"
+  },
+  "keywords": [
+    "search",
+    "plover",
+    "steno",
+    "stenography",
+    "log",
+    "count"
+  ],
+  "author": "Ted Morin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/morinted/plover_parser/issues"
+  },
+  "homepage": "https://github.com/morinted/plover_parser#readme",
+  "devDependencies": {
+    "babel-cli": "^6.4.5",
+    "babel-eslint": "^5.0.0-beta6",
+    "babel-polyfill": "^6.3.14",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-plugin-babel": "^3.0.0"
+  }
+}
