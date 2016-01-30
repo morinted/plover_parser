@@ -16,7 +16,7 @@ export const readLogFile = filename => {
       try {
         key =
           JSON.parse(`[ ${ // We build this as a JSON array and then parse it!
-            entry.match(/Translation\(\((.+)\)/)[1] // Read strokes
+            entry.match(/Translation\(\(([^\)]+)\)/)[1] // Read strokes
               .replace(/'/g, '"') // Change quotes
               .replace(/,$/, '') // Get rid of trailing comma
               .replace(/u/g, '') // Remove unicode denotation in log
