@@ -15,13 +15,14 @@ npm install -g plover_parser
 count_plover_log worlist.txt plover.log.1 plover.log.2 > output.txt
 ```
 
-## Get Gitting
+## Get Gitting (alternate title: so you want to make a pull request?)
 
 ```
 git clone https://github.com/morinted/plover_parser.git
 cd plover_parser
 npm install
 npm start ~/path/to/log.log
+npm run build
 ```
 
 ## ESLint
