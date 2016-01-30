@@ -1,0 +1,53 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/4.2.1/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'version',
+1 verbose cli   '0.1.0' ]
+2 info using npm@3.7.0
+3 info using node@v4.2.1
+4 info git [ 'status', '--porcelain' ]
+5 verbose stack Error: Git working directory not clean.
+5 verbose stack M  .npmignore
+5 verbose stack M  README.md
+5 verbose stack M  bin/count_plover_log.js
+5 verbose stack A  bin/plover_log_stats.js
+5 verbose stack A  junk.txt
+5 verbose stack M  package.json
+5 verbose stack A  src/count_plover_log.js
+5 verbose stack D  src/index.js
+5 verbose stack A  src/information.js
+5 verbose stack A  src/parsing.js
+5 verbose stack A  src/plover_log_stats.js
+5 verbose stack A  webpack.count.js
+5 verbose stack A  webpack.stats.js
+5 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:246:19
+5 verbose stack     at ChildProcess.exithandler (child_process.js:194:7)
+5 verbose stack     at emitTwo (events.js:87:13)
+5 verbose stack     at ChildProcess.emit (events.js:172:7)
+5 verbose stack     at maybeClose (internal/child_process.js:818:16)
+5 verbose stack     at Socket.<anonymous> (internal/child_process.js:319:11)
+5 verbose stack     at emitOne (events.js:77:13)
+5 verbose stack     at Socket.emit (events.js:169:7)
+5 verbose stack     at Pipe._onclose (net.js:469:12)
+6 verbose cwd /Users/ted/git/plover_parser
+7 error Darwin 15.0.0
+8 error argv "/usr/local/Cellar/node/4.2.1/bin/node" "/usr/local/bin/npm" "version" "0.1.0"
+9 error node v4.2.1
+10 error npm  v3.7.0
+11 error Git working directory not clean.
+11 error M  .npmignore
+11 error M  README.md
+11 error M  bin/count_plover_log.js
+11 error A  bin/plover_log_stats.js
+11 error A  junk.txt
+11 error M  package.json
+11 error A  src/count_plover_log.js
+11 error D  src/index.js
+11 error A  src/information.js
+11 error A  src/parsing.js
+11 error A  src/plover_log_stats.js
+11 error A  webpack.count.js
+11 error A  webpack.stats.js
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
