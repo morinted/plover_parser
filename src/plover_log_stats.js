@@ -1,7 +1,8 @@
-import { readLogFiles, readWordList } from './parsing'
+import { readLogFiles } from './parsing'
 import { exit } from './information'
 
-const usage = `Usage: plover_log_stats plover.log plover.log.1 [...] plover.log.n`
+const usage =
+  `Usage: plover_log_stats plover.log plover.log.1 [...] plover.log.n`
 
 // Get user's arguments
 const args = process.argv.slice(2)

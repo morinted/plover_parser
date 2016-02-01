@@ -43,10 +43,11 @@ export const readLogFile = filename => {
   }
 }
 
-export const readWordList = filename => {
+export const readWordList = (file, isContent) => {
   try {
     // Array of stop words (strings)
-    const lines = fs.readFileSync(filename, 'utf8')
+    const contents = isContent ? file : fs.readFileSync(file, 'utf8')
+    const lines = contents
         .replace(/\r\n/g, /\n/) // normalize line-endings
         .split('\n') // one word per line
         .filter(x => x) // get rid of undefined entries
@@ -58,7 +59,7 @@ export const readWordList = filename => {
     return [ lines, byLine ]
   } catch (e) {
     exit(`Error loading wordlist: '${
-      filename
+      !isContent ? file : 'default wordlist'
     }'. Please ensure 1 word per line, UTF-8 format.`)
   }
 }

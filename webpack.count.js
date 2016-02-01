@@ -13,6 +13,9 @@ module.exports =
   , plugins:
     [ new webpack.optimize.DedupePlugin()
     , new webpack.optimize.UglifyJsPlugin()
+    , new webpack.DefinePlugin({
+      __WEBPACK__: JSON.stringify(true)
+    })
     ]
   , module:
     { loaders:

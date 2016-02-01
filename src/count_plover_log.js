@@ -1,17 +1,29 @@
 import { readLogFiles, readWordList } from './parsing'
 import { exit } from './information'
-
-const usage = `Usage: count_plover_log wordlist.txt plover.log plover.log.1 [...] plover.log.n`
+const usage =
+  `Usage: count_plover_log [wordlist.txt or -w] plover.log plover.log.1 [...] plover.log.n`
+const staticAssets = '../assets/10000words.txt' // For development
+const wp = typeof __WEBPACK__ !== 'undefined' // Check if built or if node
+let topWords = staticAssets // Default for development
+if (wp) topWords = require('raw!../assets/10000words.txt') // prod package words
 
 // Get user's arguments
 const args = process.argv.slice(2)
 // Just the wordlist and then the list of log files as the rest.
 const [ words, ...logs ] = args
 
+let isContent = false // By default, load the provided wordlist.
+let wordFile = words
+
 if (!words) exit(`Must provide wordlist as first argument.\n\n${usage}`)
 
+if (words.toLowerCase() === '-w') { // On -w, use built-in wordlist
+  if (wp) isContent = true
+  wordFile = topWords
+}
+
 // Let's read the wordlist.
-const [ commonWords, byWord ] = readWordList(words)
+const [ commonWords, byWord ] = readWordList(wordFile, isContent)
 
 if (logs.length < 1) {
   exit(`Must provide list of logs as arguments after wordlist.\n\n${usage}`)

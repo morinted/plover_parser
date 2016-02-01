@@ -27,6 +27,14 @@ many times you used each stroke.
 count_plover_log worlist.txt plover.log.1 plover.log.2 > counts.txt
 ```
 
+Alternatively, you can use the
+[default wordlist](https://github.com/first20hours/google-10000-english)
+by providing '-w' instead of the wordlist argument:
+
+```
+count_plover_log -w plover.log.1 plover.log.2 > counts.txt
+```
+
 #### Generate Most Used Words List
 
 Goes through the Plover logs and makes a list of **all** the words you've used

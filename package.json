@@ -1,6 +1,6 @@
 {
   "name": "plover_parser",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Utilities to parse the Plover log for information.",
   "main": "bin/count_plover_log.js",
   "bin": {
@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node src/count_plover_log.js assets/10000words.txt",
     "stats": "babel-node src/plover_log_stats.js",
-    "build": "webpack --config webpack.count.js && webpack --config webpack.stats.js && echo '#!/usr/bin/env node\n' | cat - bin/count_plover_log.js > temp && mv temp bin/count_plover_log.js && echo '#!/usr/bin/env node\n' | cat - bin/plover_log_stats.js > temp && mv temp bin/plover_log_stats.js"
+    "build": "webpack --config webpack.count.js && webpack --config webpack.stats.js && echo '#!/usr/bin/env node' | cat - bin/count_plover_log.js > temp && mv temp bin/count_plover_log.js && echo '#!/usr/bin/env node' | cat - bin/plover_log_stats.js > temp && mv temp bin/plover_log_stats.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,7 @@
     "babel-preset-stage-0": "^6.3.13",
     "eslint": "^1.10.3",
     "eslint-plugin-babel": "^3.0.0",
+    "raw-loader": "^0.5.1",
     "webpack": "^2.0.6-beta"
   }
 }
